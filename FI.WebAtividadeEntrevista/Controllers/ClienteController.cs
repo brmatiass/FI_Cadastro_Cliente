@@ -68,7 +68,9 @@ namespace WebAtividadeEntrevista.Controllers
         public JsonResult Alterar(ClienteModel model)
         {
             BoCliente bo = new BoCliente();
-       
+
+            var validaCPF = bo.ValidarCPF(model.CPF);
+
             if (!this.ModelState.IsValid)
             {
                 List<string> erros = (from item in ModelState.Values
@@ -77,6 +79,11 @@ namespace WebAtividadeEntrevista.Controllers
 
                 Response.StatusCode = 400;
                 return Json(string.Join(Environment.NewLine, erros));
+            }
+            else if (!validaCPF)
+            {
+                Response.StatusCode = 400;
+                return Json("CPF Invalido");
             }
             else
             {

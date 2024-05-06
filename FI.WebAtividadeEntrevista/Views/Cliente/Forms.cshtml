@@ -78,15 +78,75 @@
             </div>
         </div>
     </div>
-
+    <div class="row">
+        <div class="col-lg-12">
+            <input type="button" id="btnBeneficiariosModal" class="btn btn-default" value="Beneficiários" data-toggle="modal" data-target="#beneficiariosModal">
+        </div>
+    </div>
     <div class="row">
         <div class="col-lg-12">
             <div class="pull-right">
-                <button type="submit" class="btn btn-sm btn-success">Salvar</button>
+                <input type="submit" form="formCadastro" id="btnSalvarDados" class="btn btn-sm btn-success" value="Salvar">
                 @Html.ActionLink("Voltar", "Index", "Cliente", new { }, new { @class = "btn btn-sm btn-danger" })
             </div>
         </div>
     </div>
-
-
 </form>
+
+<div class="modal fade" id="beneficiariosModal" tabindex="-1" role="dialog" aria-labelledby="beneficiariosModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="beneficiariosModalLabel">Beneficiários</h4>
+            </div>
+            <div class="modal-body">
+                <form id="formBeneficiariosModal" method="post">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <label for="nomeBeneficiarios">Nome:</label>
+                        </div>
+                        <div class="col-md-7">
+                            <label for="cpfBeneficiarios">CPF:</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="form-group">
+                                <input required="required" type="text" class="form-control" id="nomeBeneficiarios" name="nomeBeneficiarios" placeholder="Ex.: Bruno" maxlength="50">
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="form-group">
+                                <input required="required" type="text" class="form-control" id="cpfBeneficiarios" name="cpfBeneficiarios" placeholder="Ex.: 999.999.999-99" maxlength="14">
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <input type="submit" id="btnBeneficiariosModal" form="formBeneficiariosModal" class="btn btn-success btn-block" value="Adicionar">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>CPF</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody id="listaBeneficiarios">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>

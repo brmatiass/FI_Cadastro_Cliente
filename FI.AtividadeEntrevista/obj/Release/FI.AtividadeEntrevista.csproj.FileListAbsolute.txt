@@ -1,0 +1,6 @@
+C:\Users\bruno\OneDrive\Documentos\src\FI_Cadastro_Cliente\FI.AtividadeEntrevista\bin\Release\FI.AtividadeEntrevista.dll
+C:\Users\bruno\OneDrive\Documentos\src\FI_Cadastro_Cliente\FI.AtividadeEntrevista\bin\Release\FI.AtividadeEntrevista.pdb
+C:\Users\bruno\OneDrive\Documentos\src\FI_Cadastro_Cliente\FI.AtividadeEntrevista\obj\Release\FI.AtividadeEntrevista.csproj.AssemblyReference.cache
+C:\Users\bruno\OneDrive\Documentos\src\FI_Cadastro_Cliente\FI.AtividadeEntrevista\obj\Release\FI.AtividadeEntrevista.csproj.CoreCompileInputs.cache
+C:\Users\bruno\OneDrive\Documentos\src\FI_Cadastro_Cliente\FI.AtividadeEntrevista\obj\Release\FI.AtividadeEntrevista.dll
+C:\Users\bruno\OneDrive\Documentos\src\FI_Cadastro_Cliente\FI.AtividadeEntrevista\obj\Release\FI.AtividadeEntrevista.pdb
